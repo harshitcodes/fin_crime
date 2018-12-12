@@ -1,7 +1,7 @@
 import pandas as pd
 from odo import odo
 import sqlalchemy
-from .db_creds import *
+from db_creds import *
 from sqlalchemy import String, Integer, BigInteger, VARCHAR, \
         DateTime, Table, Column, Date, Boolean, FLOAT
 from sqlalchemy.dialects.postgresql import UUID
