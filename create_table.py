@@ -22,6 +22,7 @@ def connect(user, password, db, host='localhost', port=5432):
 
     return url, con, meta
 
+
 url, con, meta = connect(USER, PASSWORD, DATABASE)
 
 transactions = Table('transactions', meta,
@@ -51,17 +52,18 @@ users = Table("users", meta,
     Column("failed_sign_in_attempts", Integer)
 )
 
-fx_rates = Table("fx_rates", meta,
-    Column("base_ccy", VARCHAR(3)),
-    Column("ccy", VARCHAR(10)),
-    Column("rate", FLOAT(precision = 2))
-)
+# fx_rates = Table("fx_rates", meta,
+#     Column("base_ccy", VARCHAR(3)),
+#     Column("ccy", VARCHAR(10)),
+#     Column("rate", FLOAT(precision = 2))
+# )
 
-currency_details = Table("currency_details", meta,
-    Column("ccy", VARCHAR(10), primary_key=True),
-    Column("iso_code", Integer),
-    Column("exponent", Integer),
-    Column("is_crypto", Boolean, nullable=False)
-)
+# currency_details = Table("currency_details", meta,
+#     Column("ccy", VARCHAR(10), primary_key=True),
+#     Column("iso_code", Integer),
+#     Column("exponent", Integer),
+#     Column("is_crypto", Boolean, nullable=False)
+# )
+
 
 meta.create_all(con)
