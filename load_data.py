@@ -8,8 +8,8 @@ dir_path = os.path.abspath(os.path.dirname(__file__))
 
 currency_df = pd.read_csv(os.path.join(dir_path, './fct_data/currency_details.csv'))
 fx_df = pd.read_csv(os.path.join(dir_path, './fct_data/fx_rates.csv'))
-trans_df = pd.read_csv(os.path.join(dir_path, './fct_data/transactions.csv'))
-users_df = pd.read_csv(os.path.join(dir_path, './fct_data/users.csv'))
+trans_df = pd.read_csv(os.path.join(dir_path, './fct_data/transactions.csv'), index_col=0)
+users_df = pd.read_csv(os.path.join(dir_path, './fct_data/users.csv'), index_col=0)
 
 currency_df.columns = map(str.lower, currency_df.columns)
 fx_df.columns = map(str.lower, fx_df.columns)
