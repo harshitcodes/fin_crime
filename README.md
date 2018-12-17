@@ -4,7 +4,7 @@ Financial Crime Analysis
 ## How to run the Queries in the project
 
 1. Create a new python3 virtual environment using `virtualenv -p python3 <env_name>`
-2. Unzip the folder.
+2. Unzip the folder, cd into ques123.
 3. In your terminal, run `pip install -r requirements.txt`
 4. Now create a postgres database to load the CSV into sql.
 5. Add the required credentials in teh `db_cred.py` file.
@@ -21,5 +21,8 @@ Otherwise, here are the steps:
 3. Run each cell by pressing `<shift + enter>` keys on your keyboard.
 
 
-There are processing 
+There are two flow diagrams in the folder `question4`
+1. `fraud_prevention_flow.xml` - this is a flow diagram comprising processes and checks in order to prevent and stop crimes.
+`fraud_detection_modeling.xml` - this is a flow diagram to analyse past transactions and model a technique to detect fraudsters better.
+
 
