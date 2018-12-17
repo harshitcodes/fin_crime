@@ -5,5 +5,9 @@ Financial Crime Analysis
 
 1. Create a new python3 virtual environment using `virtualenv -p python3 <env_name>`
 2. Unzip the folder.
-2. In your terminal, run `pip install -r requirements.txt`
-3. 
+3. In your terminal, run `pip install -r requirements.txt`
+4. Now create a postgres database to load the CSV into sql.
+5. Add the required credentials in teh `db_cred.py` file.
+6. Now run `python create_table.py` - this creates the schema.
+7. To load the data in the tables, run `python load_data.py`
+8. Now to run any query, run `python query.py`
