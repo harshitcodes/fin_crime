@@ -1,8 +1,11 @@
+
 from connection import connect
 from db_creds import *
 
 url, con, meta = connect(USER, PASSWORD, DATABASE)
 
+# question1: checking if the query is going to work or not.
+ 
 query1 = con.execute("""WITH processed_users AS (
 SELECT left(u.phone_country, 2) AS short_phone_country, u.id 
 FROM users u
@@ -19,6 +22,9 @@ AND pu.short_phone_country = left(t.merchant_country, 2)
 GROUP BY t.user_id, t.merchant_country
 ORDER BY amount DESC;"""
 )
+
+# query to extract the to identify users whose first transaction was 
+# a successful card payment over $10 USD:
 
 query2 = con.execute("""
 With cash_amt AS (
