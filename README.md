@@ -12,7 +12,9 @@ Financial Crime Analysis
 7. To load the data in the tables, run `python load_data.py`
 8. Now to run any query, run `python query.py`
 
-## You can access the Jupyter notebook online as well: [https://github.com/harshitcodes/fin_crime/blob/master/find_fraudsters.ipynb](https://github.com/harshitcodes/fin_crime/blob/master/find_fraudsters.ipynb)
+## You can access the Jupyter notebook online as well: 
+
+[https://github.com/harshitcodes/fin_crime/blob/master/find_fraudsters.ipynb](https://github.com/harshitcodes/fin_crime/blob/master/find_fraudsters.ipynb)
 
 Otherwise, here are the steps:
 
