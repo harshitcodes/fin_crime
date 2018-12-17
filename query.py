@@ -15,7 +15,7 @@ JOIN fx_rates fx ON (fx.ccy = t.currency AND fx.base_ccy = 'EUR')
 JOIN currency_details cd ON cd.currency = t.currency
 JOIN processed_users pu ON pu.id = t.user_id
 WHERE t.source = 'GAIA'
-AND pu.short_phone_country = t.merchant_country
+AND pu.short_phone_country = left(t.merchant_country, 2)
 GROUP BY t.user_id, t.merchant_country
 ORDER BY amount DESC;"""
 )
@@ -41,16 +41,12 @@ where cash_amt.cash_amount > 10 and state = 'COMPLETED' and type = 'CARD_PAYMENT
 """
 )
 
+
+for i in query1:
+    print(i)
+print(query1.rowcount)
+
+
 for i in query2:
     print(i)
 print(query2.rowcount)
-
-# results = meta.tables['transactions']
-# print(results.c)
-
-# columns = meta.tables['users']
-# # print(columns.c)
-# for i in query1:
-#     print(i)
-
-# print(query1.rowcount)
