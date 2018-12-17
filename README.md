@@ -25,6 +25,6 @@ Otherwise, here are the steps:
 
 There are two flow diagrams in the folder `question4`
 1. `fraud_prevention_flow.xml` - this is a flow diagram comprising processes and checks in order to prevent and stop crimes.
-`fraud_detection_modeling.xml` - this is a flow diagram to analyse past transactions and model a technique to detect fraudsters better.
+2. `fraud_detection_modeling.xml` - this is a flow diagram to analyse past transactions and model a technique to detect fraudsters better.
 
 
